@@ -9,20 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-       
         
-        VStack{
-            Spacer()
-            Image("logo").resizable().aspectRatio(contentMode: .fit)
-            Spacer()
-            HStack(spacing: 20.0) {
+        
+        ZStack {
+            Image("background").ignoresSafeArea()
+            VStack{
                 Spacer()
-                Text("Test")
+                Image("logo-1")
                 Spacer()
-                Text("Test2")
+                HStack(spacing: 20.0) {
+                    Spacer()
+                    Image("card3")
+                    Spacer()
+                    Image("card4")
+                    Spacer()
+                }
+                Spacer()
+                Image("dealbutton")
+                Spacer()
+                HStack{
+                    VStack{
+                        Text("Player")
+                        Text("0")
+                    }
+                    VStack{
+                        Text("CPU")
+                        Text("0")
+                    }
+                }
                 Spacer()
             }
-            Spacer()
         }
 
         
